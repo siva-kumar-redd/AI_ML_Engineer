@@ -1890,23 +1890,7 @@ Range is frequently used in Statistics, Data Analysis, and Machine Learning.
 
 ---
 
-# 📂 Project Structure
 
-```text
-day7/
-│
-├── tuple_basics.py
-├── indexing.py
-├── traversal.py
-├── sum_tuple.py
-├── count_values.py
-├── largest.py
-├── smallest.py
-├── average.py
-├── range_calculator.py
-├── analytics_project.py
-└── README.md
-```
 
 ---
 
@@ -1935,7 +1919,447 @@ I also practiced analytics problems such as finding totals, averages, largest va
 > "Choose Lists when data changes. Choose Tuples when data must remain constant."
 
 
+# 🚀 Day 8 — Sets in Python
 
+<div align="center">
+
+![Python](https://img.shields.io/badge/Python-Intermediate-blue?style=for-the-badge&logo=python)
+![Day](https://img.shields.io/badge/Day-8-success?style=for-the-badge)
+![Topic](https://img.shields.io/badge/Topic-Sets-orange?style=for-the-badge)
+
+### 🔥 Learning Data Cleaning & Duplicate Detection with Sets
+
+</div>
+
+---
+
+# 🎯 Goal of Day 8
+
+Today I learned how Sets work in Python and how they help remove duplicates, check membership efficiently, and perform data-cleaning tasks used in AI/ML pipelines.
+
+By the end of today, I can:
+
+✅ Create Sets  
+✅ Remove Duplicate Values  
+✅ Add & Remove Elements  
+✅ Perform Membership Testing  
+✅ Detect Duplicates  
+✅ Analyze Data Quality Metrics  
+
+---
+
+# 📚 What I Learned Today
+
+## 🔹 What is a Set?
+
+A Set is an unordered collection of unique values.
+
+```python
+numbers = {10, 20, 30}
+
+print(numbers)
+```
+
+Output:
+
+```text
+{10, 20, 30}
+```
+
+---
+
+## 🔹 Duplicate Removal
+
+Sets automatically remove duplicate values.
+
+```python
+data = {10, 20, 10, 30, 20}
+
+print(data)
+```
+
+Output:
+
+```text
+{10, 20, 30}
+```
+
+---
+
+## 🔹 Creating Sets
+
+```python
+numbers = {10, 20, 30}
+
+print(numbers)
+```
+
+---
+
+## 🔹 Adding Elements
+
+```python
+numbers = {10, 20}
+
+numbers.add(30)
+
+print(numbers)
+```
+
+Output:
+
+```text
+{10, 20, 30}
+```
+
+---
+
+## 🔹 Removing Elements
+
+```python
+numbers = {10, 20, 30}
+
+numbers.remove(20)
+
+print(numbers)
+```
+
+Output:
+
+```text
+{10, 30}
+```
+
+---
+
+## 🔹 Membership Testing
+
+```python
+numbers = {10, 20, 30}
+
+if 20 in numbers:
+    print("Found")
+```
+
+Output:
+
+```text
+Found
+```
+
+---
+
+## 🔹 Counting Unique Values
+
+```python
+data = [10, 20, 10, 30, 20]
+
+print(len(set(data)))
+```
+
+Output:
+
+```text
+3
+```
+
+Unique Values:
+
+```text
+10
+20
+30
+```
+
+---
+
+## 🔹 Duplicate Detection
+
+```python
+data = [10, 20, 10, 30]
+
+if len(data) != len(set(data)):
+    print("Duplicates Found")
+else:
+    print("No Duplicates")
+```
+
+Output:
+
+```text
+Duplicates Found
+```
+
+---
+
+# 📊 Data Quality Metrics
+
+## Duplicate Count
+
+Formula:
+
+```python
+duplicate_count = len(data) - len(set(data))
+```
+
+Example:
+
+```python
+data = [10, 20, 10, 30, 20, 40]
+```
+
+Output:
+
+```text
+2 duplicate records
+```
+
+---
+
+## Unique Percentage
+
+Formula:
+
+```python
+unique_percentage = len(set(data)) / len(data) * 100
+```
+
+Example Result:
+
+```text
+66.67%
+```
+
+Meaning:
+
+```text
+66.67% of records are unique
+```
+
+---
+
+## Duplicate Percentage
+
+Formula:
+
+```python
+duplicate_percentage = duplicate_count / len(data) * 100
+```
+
+Example Result:
+
+```text
+33.33%
+```
+
+---
+
+# 💻 Mini Project — Customer Data Cleaner
+
+Dataset:
+
+```python
+customer_ids = [
+    101, 102, 101,
+    103, 102, 104
+]
+```
+
+### Features
+
+- Remove Duplicate Customers
+- Count Unique Records
+- Count Duplicate Records
+- Calculate Data Quality Metrics
+- Membership Testing
+
+### Concepts Used
+
+- Sets
+- Lists
+- Conditions
+- Analytics
+- Data Cleaning
+
+---
+
+# 🏢 Real-World AI/ML Connection
+
+Sets are commonly used in:
+
+### Customer Deduplication
+
+```python
+unique_customers = set(customer_ids)
+```
+
+### Email Deduplication
+
+```python
+emails = [
+    "a@gmail.com",
+    "b@gmail.com",
+    "a@gmail.com"
+]
+
+unique_emails = set(emails)
+```
+
+### Fraud Detection
+
+```python
+fraud_users = {
+    101,
+    102,
+    105,
+    110
+}
+```
+
+Check:
+
+```python
+if 105 in fraud_users:
+    print("Fraud User")
+```
+
+Used in:
+
+- 🤖 Machine Learning Preprocessing
+- 📊 Data Analysis
+- 🧹 Data Cleaning
+- 🔍 Fraud Detection
+- 📈 Customer Analytics
+
+---
+
+# 🧠 Interview Concepts Learned
+
+## Business Meaning of Output
+
+Instead of asking:
+
+```text
+What does this code print?
+```
+
+Ask:
+
+```text
+What business information does this provide?
+```
+
+Example:
+
+```python
+len(data) - len(set(data))
+```
+
+Meaning:
+
+```text
+Number of duplicate records in the dataset
+```
+
+---
+
+## Data Quality Analysis
+
+Using:
+
+```python
+len(data)
+len(set(data))
+```
+
+We can determine:
+
+- Total Records
+- Unique Records
+- Duplicate Records
+- Unique Percentage
+- Duplicate Percentage
+
+These are common preprocessing tasks before training ML models.
+
+---
+
+# 🧠 Practice Programs Completed
+
+- ✅ Set Creation
+- ✅ add()
+- ✅ remove()
+- ✅ Membership Testing
+- ✅ Duplicate Detection
+- ✅ Unique Record Counting
+- ✅ Duplicate Record Counting
+- ✅ Customer Data Cleaning
+- ✅ Email Deduplication
+- ✅ Fraud User Detection
+- ✅ Data Quality Metrics
+
+---
+
+
+
+# ⚡ Why Sets Matter
+
+Sets help developers:
+
+- Remove duplicates automatically
+- Improve data quality
+- Perform fast lookups
+- Clean datasets before ML training
+- Handle large-scale records efficiently
+
+Sets are essential in Data Science and Machine Learning preprocessing.
+
+---
+
+# 📈 Learning Progress
+
+```text
+Python Basics        ████████████████ 100%
+Decision Making      ████████████████ 100%
+Loops                ████████████████ 100%
+Functions            ████████████████ 100%
+Lists                ████████████████ 100%
+Dictionaries         ████████████████ 100%
+Tuples               ████████████████ 100%
+Sets                 ██████████████░░ 90%
+Problem Solving      ███████████████░ 88%
+AI/ML Journey        ██████████░░░░░░ 60%
+```
+
+---
+
+# 💡 Day 8 Reflection
+
+Today I learned how Sets help remove duplicates, perform membership testing, and improve data quality. I also explored real-world applications such as customer deduplication, fraud detection, and dataset cleaning.
+
+Data cleaning is one of the most important steps in AI/ML workflows, and Sets provide a simple yet powerful way to handle duplicate data.
+
+> "Clean data leads to better models. Sets help create clean data."
+
+---
+
+# 🎯 Next Goals
+
+- Strings
+- File Handling
+- NumPy
+- Pandas
+- Data Analysis Projects
+
+
+
+<div align="center">
+
+## ⭐ Day 8 Completed Successfully
+
+### 🚀 Building Strong Foundations for AI/ML Engineering
+
+</div>
 
 
 
