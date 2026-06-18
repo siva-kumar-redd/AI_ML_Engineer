@@ -1,5 +1,5 @@
-# AI_ML_Engineer
-Aspiring AI/ML Engineer with a strong interest in Python, Data Analysis, and Machine Learning.   Passionate about building real-world projects, solving problems, and continuously improving technical skills through hands-on learning and development.
+# ML_Engineer
+Aspiring ML Engineer with a strong interest in Python, Data Analysis, and Machine Learning.   Passionate about building real-world projects, solving problems, and continuously improving technical skills through hands-on learning and development.
 
 # 🎓 Day 1 — Python Foundations & AI/ML Journey
 
